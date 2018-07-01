@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  margin-bottom: 8%;
+}
+
+
+/* Header */
+header {
+  margin: 5% 0;
+}
+h1 {
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+/* Login and Register */
+/* Common */
+.myDiv {
+ text-align: center;
+}
+#nameinput,
+#pwinput,
+#userinput,
+#passwordinput
+{
+  width: 50%;
+  margin: 2% auto;
+}
+
+/* Login button */
+.loginBtn,
+.registerBtn {
+  width: 20rem;
+  height: 3.3rem;
+  border-radius: 9px;
+}
+
+.loginBtn {
+  background-color: rgb(37, 37, 38);
+  color: #fff;
+}
+
+.registerBtn {
+  background-color: #fff;
+  border-color: rgb(37, 37, 38);
+}
+
+/* media query */
+@media(max-width: 765px) {
+  .loginBtn,
+  .registerBtn {
+    width: 10rem;
+    height: 2.2rem;
+    border-radius: 9px;
+  }
+
+}
