@@ -31,7 +31,7 @@ function myFunction() {
     } else {
     };
   };
-  alert("no match"); // put this outside of loop otherwise even though correct information was input, this alert pop up.
+  alert("We can't find your name. Please register"); // put this outside of loop otherwise even though correct information was input, this alert pop up.
 }
 
 //Register - create new user
@@ -54,10 +54,29 @@ function registerClick() {
     } else if (registerPassword.length < 8) {  //if password is less than 8 letters, error msg pop up
       alert("that password is too short, include 8 or more characters")
       return
+    } else {
+      //create div and p, that shows up when register button was clicked
+      var displayDiv = document.createElement('div');
+      displayDiv.className = 'displayDiv';
+      var displayP = document.createElement('p');
+      displayP.className = 'displayP';
+      var myDiv2 = document.getElementsByClassName('myDiv2')[0];
+      //create icon
+      var icon = document.createElement('i');
+      //icon from fontawesome
+      icon.className = 'far fa-smile';
+
+      myDiv2.appendChild(displayDiv);
+      displayDiv.appendChild(displayP);
     }
   }
+//display text outside of the loop, otherwise it dislayes repeatedly
+ displayP.textContent = "Username: " + registerUser + " was registerd now. Thank you! ";
+ //append icon to paragrah, this also has to be outside of the loop
+ displayP.appendChild(icon);
 
+ //push newuser to array
  person.push(newUser) // this push newUser(object:name and password to array)
  console.log(person)
 
-}
+} //end of function
